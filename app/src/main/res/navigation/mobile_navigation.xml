@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/menuFragment">
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.example.navbar.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" />
+    <fragment
+        android:id="@+id/staffFragment"
+        android:name="com.example.navbar.StaffFragment"
+        android:label="fragment_staff"
+        tools:layout="@layout/fragment_staff" />
+    <fragment
+        android:id="@+id/statisticalFragment"
+        android:name="com.example.navbar.StatisticalFragment"
+        android:label="fragment_statistical"
+        tools:layout="@layout/fragment_statistical" />
+    <fragment
+        android:id="@+id/tableFragment"
+        android:name="com.example.navbar.TableFragment"
+        android:label="fragment_table"
+        tools:layout="@layout/fragment_table" />
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.navbar.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_staffFragment"
+            app:destination="@id/staffFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_tableFragment"
+            app:destination="@id/tableFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_statisticalFragment"
+            app:destination="@id/statisticalFragment" />
+    </fragment>
+</navigation>
