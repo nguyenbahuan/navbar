@@ -8,7 +8,11 @@
         android:id="@+id/menuFragment"
         android:name="com.example.navbar.MenuFragment"
         android:label="fragment_menu"
-        tools:layout="@layout/fragment_menu" />
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_addFoodFragment"
+            app:destination="@id/addFoodFragment" />
+    </fragment>
     <fragment
         android:id="@+id/staffFragment"
         android:name="com.example.navbar.StaffFragment"
@@ -42,4 +46,9 @@
             android:id="@+id/action_homeFragment_to_statisticalFragment"
             app:destination="@id/statisticalFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/addFoodFragment"
+        android:name="com.example.navbar.AddFoodFragment"
+        android:label="fragment_add_food"
+        tools:layout="@layout/fragment_add_food" />
 </navigation>
